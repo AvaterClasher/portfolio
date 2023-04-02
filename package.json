@@ -1,0 +1,40 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohansenJunias20/portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohansenJunias20/portofolio/issues"
+  },
+  "homepage": "https://github.com/JohansenJunias20/portofolio#readme",
+  "devDependencies": {
+    "ts-loader": "^9.2.6",
+    "ts-shader-loader": "^1.0.6",
+    "typescript": "^4.5.3",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@types/cannon": "^0.1.8",
+    "@types/three": "^0.135.0",
+    "cannon": "^0.6.2",
+    "cannon-es": "^0.18.0",
+    "file-loader": "^6.2.0",
+    "glslify-loader": "^2.0.0",
+    "gsap": "^3.9.1",
+    "is-mobile": "^3.0.0",
+    "socket.io-client": "^4.4.1",
+    "three": "^0.135.0",
+    "webpack": "^5.65.0"
+  }
+}

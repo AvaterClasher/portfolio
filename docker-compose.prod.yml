@@ -1,0 +1,24 @@
+version: '3'
+services:
+  socketio:
+    build: .
+    # build: 
+    #   context: ./dockerfiles
+    #   dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "2000:2000"
+    command: sh /usr/src/app/prod.sh
+    volumes:
+      - "./ws-server:/usr/src/app"
+      - "${PWD}/refreshtoken.spotify.txt:/usr/src/app/refreshtoken.spotify.txt"
+      - "../ssl/main:/etc/letsencrypt"
+      - "../ssl/lib:/var/lib/letsencrypt"
+  coturn:
+    image: instrumentisto/coturn
+    network_mode: host
+    volumes:
+      - "./turnserver.conf:/etc/coturn/turnserver.conf" 
+      # - "./refreshtoken.spotify.txt:/usr/src/app/refreshtoken.spotify.txt"
+      - "../ssl/main/:/etc/letsencrypt/" 
+
